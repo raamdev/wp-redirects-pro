@@ -54,8 +54,6 @@ class Installer extends SCoreClasses\SCore\Base\Core
     {
         $caps = a::postTypeCaps();
 
-        print_r($caps);
-
         foreach (['administrator', 'editor', 'shop_manager'] as $_role) {
             if (!($_WP_Role = get_role($_role))) {
                 continue; // Not possible.
