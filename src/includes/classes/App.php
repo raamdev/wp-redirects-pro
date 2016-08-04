@@ -31,143 +31,53 @@ use function get_defined_vars as vars;
 /**
  * Application.
  *
- * @since 000000 Initial release.
+ * @since 16xxxx Initial release.
  */
 class App extends SCoreClasses\App
 {
     /**
      * Version.
      *
-     * @since 000000
+     * @since 16xxxx
      *
      * @var string Version.
      */
-    const VERSION = '160727.73975'; //v//
+    const VERSION = '160804.23413'; //v//
 
     /**
      * Constructor.
      *
-     * @since 000000 Initial release.
+     * @since 16xxxx Initial release.
      *
      * @param array $instance Instance args.
      */
     public function __construct(array $instance = [])
     {
         $instance_base = [
-            '©di' => [
-                /*
-                    '©default_rule' => [
-                        'new_instances' => [
-                        ],
-                    ],
-                */
-            ],
-
             '§specs' => [
-                /*
-                    '§is_pro'          => false,
-                    '§in_wp'           => false,
-                    '§is_network_wide' => false,
+                '§in_wp'           => false,
+                '§is_network_wide' => false,
 
-                    '§type'            => 'plugin',
-                    '§file'            => dirname(__FILE__, 4).'/plugin.php',
-                */
+                '§type' => 'plugin',
+                '§file' => dirname(__FILE__, 4).'/plugin.php',
             ],
             '©brand' => [
-                /*
-                    '©acronym'     => '',
-                    '©name'        => '',
+                '©acronym' => 'WPRD',
+                '©name'    => 'WP Redirects',
 
-                    '©slug'        => '',
-                    '©var'         => '',
+                '©slug' => 'wp-redirects',
+                '©var'  => 'wp_redirects',
 
-                    '©short_slug'  => '',
-                    '©short_var'   => '',
+                '©short_slug' => 'wp-rd',
+                '©short_var'  => 'wp_rd',
 
-                    '©text_domain' => '',
-                */
+                '©text_domain' => 'wp-redirects',
             ],
-
             '§pro_option_keys' => [
-                /*
-                    '[key]',
-                */
+                // Nothing here.
             ],
             '§default_options' => [
-                /*
-                    '[key]' => '[value]',
-                */
-            ],
-
-            '§conflicts' => [
-                '§plugins' => [
-                    /*
-                        '[slug]'  => '[name]',
-                    */
-                ],
-                '§themes' => [
-                    /*
-                        '[slug]'  => '[name]',
-                    */
-                ],
-                '§deactivatable_plugins' => [
-                    /*
-                        '[slug]'  => '[name]',
-                    */
-                ],
-            ],
-            '§dependencies' => [
-                '§plugins' => [
-                    /*
-                        '[slug]' => [
-                            'name'        => '',
-                            'url'         => '',
-                            'archive_url' => '',
-                            'in_wp'       => true,
-                            'test'        => function(string $slug) {},
-
-                            A test function is optional.
-                            A successful test must return nothing.
-                            A failed test must return an array with:
-                                - `reason`      = One of: `needs-upgrade|needs-downgrade`.
-                                - `min_version` = Min version, if `reason=needs-upgrade`.
-                                - `max_version` = Max version, if `reason=needs-downgrade`.
-                        ],
-                    */
-                ],
-                '§themes' => [
-                    /*
-                        '[slug]' => [
-                            'name'        => '',
-                            'url'         => '',
-                            'archive_url' => '',
-                            'in_wp'       => true,
-                            'test'        => function(string $slug) {},
-
-                            A test function is optional.
-                            A successful test must return nothing.
-                            A failed test must return an array with:
-                                - `reason`      = One of: `needs-upgrade|needs-downgrade`.
-                                - `min_version` = Min version, if `reason=needs-upgrade`.
-                                - `max_version` = Max version, if `reason=needs-downgrade`.
-                        ],
-                    */
-                ],
-                '§others' => [
-                    /*
-                        '[arbitrary key]' => [
-                            'name'        => '', // Short plain-text name; i.e., '[name]' Required
-                            'description' => '', // Brief rich-text description; i.e., It requires [description].
-                            'test'        => function(string $key) {},
-
-                            A test function is required.
-                            A successful test must return nothing.
-                            A failed test must return an array with:
-                                - `how_to_resolve` = Brief rich-text description; i.e., → To resolve, [how_to_resolve].
-                                - `cap_to_resolve` = Cap required to satisfy; e.g., `manage_options`.
-                        ],
-                    */
-                ],
+                'default_status_code' => 301,
             ],
         ];
         parent::__construct($instance_base, $instance);
@@ -176,20 +86,28 @@ class App extends SCoreClasses\App
     /**
      * Early hook setup handler.
      *
-     * @since 000000 Initial release.
+     * @since 16xxxx Initial release.
      */
     protected function onSetupEarlyHooks()
     {
         parent::onSetupEarlyHooks();
+
+        s::addAction('other_install_routines', [$this->Utils->Installer, 'onOtherInstallRoutines']);
+        s::addAction('other_uninstall_routines', [$this->Utils->Uninstaller, 'onOtherUninstallRoutines']);
     }
 
     /**
      * Other hook setup handler.
      *
-     * @since 000000 Initial release.
+     * @since 16xxxx Initial release.
      */
     protected function onSetupOtherHooks()
     {
         parent::onSetupOtherHooks();
+
+        add_action('init', [$this->Utils->PostType, 'onInit']);
+        add_action('admin_menu', [$this->Utils->MenuPage, 'onAdminMenu']);
+        add_action('admin_init', [$this->Utils->PostMetaBox, 'onAdminInit']);
+        add_action('template_redirect', [$this->Utils->Redirects, 'onTemplateRedirect']);
     }
 }

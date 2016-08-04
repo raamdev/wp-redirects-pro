@@ -1,12 +1,12 @@
 <?php
 /**
- * Facades.
+ * Post meta box utils.
  *
  * @author @jaswsinc
  * @copyright WP Sharks™
  */
 declare (strict_types = 1);
-namespace WebSharks\WpSharks\WPRedirects\Pro\Classes\Base;
+namespace WebSharks\WpSharks\WPRedirects\Pro\Classes\Utils;
 
 use WebSharks\WpSharks\WPRedirects\Pro\Classes;
 use WebSharks\WpSharks\WPRedirects\Pro\Interfaces;
@@ -29,11 +29,24 @@ use function assert as debug;
 use function get_defined_vars as vars;
 
 /**
- * Pseudo-static facades.
+ * Post meta box utils.
  *
- * @since 160624.34776 Initial release.
+ * @since 16xxxx Initial release.
  */
-abstract class Facades
+class PostMetaBox extends SCoreClasses\SCore\Base\Core
 {
-    use Traits\Facades\PostType;
+    /**
+     * On admin init.
+     *
+     * @since 16xxxx Initial release.
+     */
+    public function onAdminInit()
+    {
+        s::addPostMetaBox([
+            'include_post_types' => 'redirect',
+            'slug'               => 'redirect-data',
+            'title'              => __('Redirect Data', 'wp-redirects'),
+            'template_file'      => 'admin/menu-pages/post-meta-box/redirect-data.php',
+        ]);
+    }
 }

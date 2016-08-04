@@ -1,12 +1,12 @@
 <?php
 /**
- * Facades.
+ * Install utils.
  *
  * @author @jaswsinc
  * @copyright WP Sharks™
  */
 declare (strict_types = 1);
-namespace WebSharks\WpSharks\WPRedirects\Pro\Classes\Base;
+namespace WebSharks\WpSharks\WPRedirects\Pro\Classes\Utils;
 
 use WebSharks\WpSharks\WPRedirects\Pro\Classes;
 use WebSharks\WpSharks\WPRedirects\Pro\Interfaces;
@@ -29,11 +29,40 @@ use function assert as debug;
 use function get_defined_vars as vars;
 
 /**
- * Pseudo-static facades.
+ * Install utils.
  *
- * @since 160624.34776 Initial release.
+ * @since 16xxxx Initial release.
  */
-abstract class Facades
+class Installer extends SCoreClasses\SCore\Base\Core
 {
-    use Traits\Facades\PostType;
+    /**
+     * Other install routines.
+     *
+     * @since 16xxxx Initial release.
+     */
+    public function onOtherInstallRoutines()
+    {
+        $this->addCaps();
+    }
+
+    /**
+     * Add capabilities.
+     *
+     * @since 16xxxx Initial release.
+     */
+    protected function addCaps()
+    {
+        $caps = a::postTypeCaps();
+
+        print_r($caps);
+
+        foreach (['administrator', 'editor', 'shop_manager'] as $_role) {
+            if (!($_WP_Role = get_role($_role))) {
+                continue; // Not possible.
+            }
+            foreach ($caps as $_cap) {
+                $_WP_Role->add_cap($_cap);
+            } // unset($_cap);
+        } // unset($_role, $_WP_Role);
+    }
 }

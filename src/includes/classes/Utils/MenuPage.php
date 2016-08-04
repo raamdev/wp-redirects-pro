@@ -1,6 +1,6 @@
 <?php
 /**
- * Foo (example).
+ * Menu page utils.
  *
  * @author @jaswsinc
  * @copyright WP Sharks™
@@ -29,19 +29,31 @@ use function assert as debug;
 use function get_defined_vars as vars;
 
 /**
- * Foo (example).
+ * Menu page utils.
  *
- * @since 000000 Initial release.
+ * @since 16xxxx Initial release.
  */
-class Foo extends SCoreClasses\SCore\Base\Core
+class MenuPage extends SCoreClasses\SCore\Base\Core
 {
     /**
-     * Foo invoke (example).
+     * Adds menu pages.
      *
-     * @since 000000 Initial release.
+     * @since 16xxxx Initial release.
      */
-    public function __invoke()
+    public function onAdminMenu()
     {
-        return; // Just an example.
+        s::addMenuPageItem([
+            'menu_title'    => __('Options', 'wp-redirects'),
+            'parent_page'   => 'edit.php?post_type=redirect',
+            'template_file' => 'admin/menu-pages/options/default.php',
+
+            'tabs' => [
+                'default' => sprintf(__('%1$s', 'wp-redirects'), esc_html($this->App->Config->©brand['©name'])),
+                'restore' => [
+                    'label' => __('Restore Default Options', 'wp-redirects'),
+                    'url'   => s::restoreDefaultOptionsUrl(), 'onclick' => 'confirm',
+                ],
+            ],
+        ]);
     }
 }

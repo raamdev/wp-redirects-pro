@@ -1,12 +1,12 @@
 <?php
 /**
- * Facades.
+ * Template.
  *
  * @author @jaswsinc
  * @copyright WP Sharks™
  */
 declare (strict_types = 1);
-namespace WebSharks\WpSharks\WPRedirects\Pro\Classes\Base;
+namespace WebSharks\WpSharks\WPRedirects\Pro\Classes;
 
 use WebSharks\WpSharks\WPRedirects\Pro\Classes;
 use WebSharks\WpSharks\WPRedirects\Pro\Interfaces;
@@ -28,12 +28,24 @@ use WebSharks\Core\WpSharksCore\Traits as CoreTraits;
 use function assert as debug;
 use function get_defined_vars as vars;
 
-/**
- * Pseudo-static facades.
- *
- * @since 160624.34776 Initial release.
- */
-abstract class Facades
-{
-    use Traits\Facades\PostType;
-}
+$Form = $this->s::menuPageForm('§save-options');
+?>
+<?= $Form->openTag(); ?>
+    <?= $Form->openTable(
+        __('General Options'),
+        sprintf(__('You can browse our <a href="%1$s" target="_blank">knowledge base</a> to learn more about these options.'), esc_url(s::brandUrl('/kb')))
+    ); ?>
+
+        <?= $Form->inputRow([
+            'type'  => 'number',
+            'label' => __('Default Status Code'),
+            'tip'   => __('This determines the default HTTP redirect status code when a redirection occurs.'),
+
+            'name'  => 'default_status_code',
+            'value' => s::getOption('default_status_code'),
+        ]); ?>
+
+    <?= $Form->closeTable(); ?>
+
+    <?= $Form->submitButton(); ?>
+<?= $Form->closeTag(); ?>

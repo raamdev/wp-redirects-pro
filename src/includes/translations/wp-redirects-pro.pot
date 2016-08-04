@@ -1,0 +1,599 @@
+# Copyright (C) 2016 WP Redirects Pro
+# This file is distributed under the same license as the WP Redirects Pro package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Redirects Pro 160804.23413\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-redirects-pro\n"
+"POT-Creation-Date: 2016-08-04 06:30:15+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:104
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:104
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:104
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:104
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:104
+#: src/includes/classes/Utils/PostType.php:102
+msgid "Redirections."
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:107
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:111
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:107
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:111
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:107
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:111
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:107
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:111
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:107
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:111
+#: src/includes/classes/Utils/PostType.php:105
+#: src/includes/classes/Utils/PostType.php:109
+msgid "Redirects"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:108
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:110
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:108
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:110
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:108
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:110
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:108
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:110
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:108
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:110
+#: src/includes/classes/Utils/PostType.php:106
+#: src/includes/classes/Utils/PostType.php:108
+msgid "Redirect"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:113
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:113
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:113
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:113
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:113
+#: src/includes/classes/Utils/PostType.php:111
+msgid "All Redirects"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:114
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:114
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:114
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:114
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:114
+#: src/includes/classes/Utils/PostType.php:112
+msgid "Add Redirect"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:115
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:115
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:115
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:115
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:115
+#: src/includes/classes/Utils/PostType.php:113
+msgid "Add New Redirect"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:116
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:116
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:116
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:116
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:116
+#: src/includes/classes/Utils/PostType.php:114
+msgid "New Redirect"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:117
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:117
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:117
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:117
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:117
+#: src/includes/classes/Utils/PostType.php:115
+msgid "Edit Redirect"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:118
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:118
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:118
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:118
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:118
+#: src/includes/classes/Utils/PostType.php:116
+msgid "View Redirect"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:120
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:120
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:120
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:120
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:120
+#: src/includes/classes/Utils/PostType.php:118
+msgid "Search Redirects"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:121
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:121
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:121
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:121
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:121
+#: src/includes/classes/Utils/PostType.php:119
+msgid "No Redirects Found"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:122
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:122
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:122
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:122
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:122
+#: src/includes/classes/Utils/PostType.php:120
+msgid "No Redirects Found in Trash"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:124
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:124
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:124
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:124
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:124
+#: src/includes/classes/Utils/PostType.php:122
+msgid "Insert Into Redirect"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:125
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:125
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:125
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:125
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:125
+#: src/includes/classes/Utils/PostType.php:123
+msgid "Upload to this Redirect"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:127
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:127
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:127
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:127
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:127
+#: src/includes/classes/Utils/PostType.php:125
+msgid "Set Featured Image"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:128
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:128
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:128
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:128
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:128
+#: src/includes/classes/Utils/PostType.php:126
+msgid "Remove Featured Image"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:129
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:129
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:129
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:129
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:129
+#: src/includes/classes/Utils/PostType.php:127
+msgid "Use as Featured Image"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:131
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:131
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:131
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:131
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:131
+#: src/includes/classes/Utils/PostType.php:129
+msgid "Redirects List"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:132
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:132
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:132
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:132
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:132
+#: src/includes/classes/Utils/PostType.php:130
+msgid "Redirects List Navigation"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:134
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:134
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:134
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:134
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:134
+#: src/includes/classes/Utils/PostType.php:132
+msgid "Redirects Archives"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:135
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:135
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:135
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:135
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:135
+#: src/includes/classes/Utils/PostType.php:133
+msgid "Filter Redirects List"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:136
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:136
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:136
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:136
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:136
+#: src/includes/classes/Utils/PostType.php:134
+msgid "Parent Redirect:"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:157
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:160
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:157
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:160
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:157
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:160
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:157
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:160
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:157
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:160
+#: src/includes/classes/Utils/PostType.php:158
+#: src/includes/classes/Utils/PostType.php:161
+msgid "Redirect Categories"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:161
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:163
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:161
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:163
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:161
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:163
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:161
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:163
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:161
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:163
+#: src/includes/classes/Utils/PostType.php:162
+#: src/includes/classes/Utils/PostType.php:164
+msgid "Redirect Category"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:164
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:164
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:164
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:164
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:164
+#: src/includes/classes/Utils/PostType.php:165
+msgid "Categories"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:166
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:184
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:166
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:184
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:166
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:184
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:166
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:184
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:166
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:184
+#: src/includes/classes/Utils/PostType.php:167
+#: src/includes/classes/Utils/PostType.php:185
+msgid "All Categories"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:167
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:167
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:167
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:167
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:167
+#: src/includes/classes/Utils/PostType.php:168
+msgid "Add New Category"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:168
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:168
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:168
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:168
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:168
+#: src/includes/classes/Utils/PostType.php:169
+msgid "New Category Name"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:169
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:169
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:169
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:169
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:169
+#: src/includes/classes/Utils/PostType.php:170
+msgid "Add or Remove Categories"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:170
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:170
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:170
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:170
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:170
+#: src/includes/classes/Utils/PostType.php:171
+msgid "View Category"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:171
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:171
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:171
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:171
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:171
+#: src/includes/classes/Utils/PostType.php:172
+msgid "Edit Category"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:172
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:172
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:172
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:172
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:172
+#: src/includes/classes/Utils/PostType.php:173
+msgid "Update Category"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:174
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:174
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:174
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:174
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:174
+#: src/includes/classes/Utils/PostType.php:175
+msgid "Search Categories"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:175
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:175
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:175
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:175
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:175
+#: src/includes/classes/Utils/PostType.php:176
+msgid "No Categories Found"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:176
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:176
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:176
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:176
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:176
+#: src/includes/classes/Utils/PostType.php:177
+msgid "No Categories"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:178
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:178
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:178
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:178
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:178
+#: src/includes/classes/Utils/PostType.php:179
+msgid "Choose From the Most Used Categories"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:179
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:179
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:179
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:179
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:179
+#: src/includes/classes/Utils/PostType.php:180
+msgid "Separate Categories w/ Commas"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:181
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:181
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:181
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:181
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:181
+#: src/includes/classes/Utils/PostType.php:182
+msgid "Categories List"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:182
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:182
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:182
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:182
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:182
+#: src/includes/classes/Utils/PostType.php:183
+msgid "Categories List Navigation"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:185
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:185
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:185
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:185
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:185
+#: src/includes/classes/Utils/PostType.php:186
+msgid "Popular Categories"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:186
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:186
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:186
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:186
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:186
+#: src/includes/classes/Utils/PostType.php:187
+msgid "Parent Category"
+msgstr ""
+
+#: .~build/.~/pkg-dirs/for-zip-tgz/wp-redirects-pro/src/includes/classes/Utils/PostType.php:187
+#: .~build/wp-redirects/.~build/.~/pkg-dirs/for-zip-tgz/wp-redirects/src/includes/classes/Utils/PostType.php:187
+#: .~build/wp-redirects/.~build/wp-redirects/src/includes/classes/Utils/PostType.php:187
+#: .~build/wp-redirects/src/includes/classes/Utils/PostType.php:187
+#: .~build/wp-redirects-pro/src/includes/classes/Utils/PostType.php:187
+#: src/includes/classes/Utils/PostType.php:188
+msgid "Parent Category:"
+msgstr ""
+
+#: src/includes/classes/Utils/MenuPage.php:46
+msgid "Options"
+msgstr ""
+
+#: src/includes/classes/Utils/MenuPage.php:51
+msgid "%1$s"
+msgstr ""
+
+#: src/includes/classes/Utils/MenuPage.php:53
+msgid "Restore Default Options"
+msgstr ""
+
+#: src/includes/classes/Utils/PostMetaBox.php:48
+msgid "Redirect Data"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:37
+msgid "Product Tab Options"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:38
+msgid "These allow you to customize the 'Knowledge Base' product tab added by this plugin. The defaults are usually just fine, but you can customize further if you like. You can also browse <em>our</em> <a href=\"%1$s\" target=\"_blank\">knowledge base</a> to learn more about these options."
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:43
+msgid "Tab Priority (Position)"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:44
+msgid "This controls the tab display position in WooCommerce.<hr />You should only need to change this if you have another plugin that adds a new tab with the same (i.e., a conflicting) priority."
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:51
+msgid "Default Content"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:52
+msgid "When you add a new product, this will be the default Knowledge Base tab content.<hr />Setting this to <code>[kb /]</code> is a suggested default, but you can learn more about the shortcode and customize it further if you like."
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:53
+msgid "e.g., <code>[kb show_search_box=\"yes\" max=\"25\" /]</code> and many other supported attributes."
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:60
+msgid "Content Filters"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:61
+msgid "This controls which built-in WordPress content filters are applied to content in the 'Knowledge Base' Product tab. All content filters suggested.<hr />Note: <code>jetpack-markdown</code> is only possible if you have Jetpack installed with Markdown enabled. The same is true for <code>jetpack-latex</code>."
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:84
+msgid "Permalink Options"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:85
+msgid "This controls URLs that lead to KB indexes, articles, categories, tags, etc. The defaults are usually just fine, but you can adjust if necessary."
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:86
+msgid "If you do customize these, be sure to use <strong>unique</strong> values; i.e., none of these can be the same as any other."
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:90
+msgid "Root Index Base"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:91
+msgid "%1$s/<code>%2$s</code>"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:98
+msgid "Articles Base"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:99
+#: src/includes/templates/admin/menu-pages/options/default.php:115
+#: src/includes/templates/admin/menu-pages/options/default.php:131
+#: src/includes/templates/admin/menu-pages/options/default.php:147
+msgid "%1$s/<code>%2$s</code>/[slug]"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:106
+msgid "Product-Specific Article"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:107
+#: src/includes/templates/admin/menu-pages/options/default.php:123
+#: src/includes/templates/admin/menu-pages/options/default.php:139
+#: src/includes/templates/admin/menu-pages/options/default.php:155
+msgid "%1$s/<code>%2$s</code>/[product]/[slug]"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:114
+msgid "Categories Base"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:122
+msgid "Product-Specific Category"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:130
+msgid "Tags Base"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:138
+msgid "Product-Specific Tag"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:146
+msgid "Authors Base"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:154
+msgid "Product-Specific Author"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:166
+msgid "Permalink Endpoint Options"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:167
+msgid "An Endpoint adds a new behavhior to an existing Permalink structure in WooCommerce."
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:171
+msgid "Product Endpoint Redirect"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:172
+msgid "This is a product endpoint that, if accessed, will redirect a visitor to the KB index for a specific product.<hr />e.g., %1$s/product/[slug]/<code>kb</code>"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:38
+msgid "Redirects To"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:39
+msgid "This is where a visitor will be redirected to."
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:46
+msgid "Redirect Status Code"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:47
+msgid "This is the status code used in the redirection."
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:52
+msgid "301"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:53
+msgid "302"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP Redirects Pro"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wpsharks.com/product/wp-redirects-pro"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "WP Sharks™ plugin wp-redirects."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WP Sharks™"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wpsharks.com"
+msgstr ""

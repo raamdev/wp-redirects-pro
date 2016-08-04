@@ -1,12 +1,12 @@
 <?php
 /**
- * Facades.
+ * Post type.
  *
  * @author @jaswsinc
  * @copyright WP Sharks™
  */
 declare (strict_types = 1);
-namespace WebSharks\WpSharks\WPRedirects\Pro\Classes\Base;
+namespace WebSharks\WpSharks\WPRedirects\Pro\Traits\Facades;
 
 use WebSharks\WpSharks\WPRedirects\Pro\Classes;
 use WebSharks\WpSharks\WPRedirects\Pro\Interfaces;
@@ -29,11 +29,18 @@ use function assert as debug;
 use function get_defined_vars as vars;
 
 /**
- * Pseudo-static facades.
+ * Post type.
  *
- * @since 160624.34776 Initial release.
+ * @since 16xxxx
  */
-abstract class Facades
+trait PostType
 {
-    use Traits\Facades\PostType;
+    /**
+     * @since 16xxxx Post type utils.
+     * @see Classes\Utils\PostType::$caps
+     */
+    public static function postTypeCaps()
+    {
+        return $GLOBALS[static::class]->Utils->PostType->caps;
+    }
 }

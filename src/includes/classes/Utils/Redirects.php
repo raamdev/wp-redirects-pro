@@ -1,12 +1,12 @@
 <?php
 /**
- * Foo (example).
+ * Redirect utils.
  *
  * @author @jaswsinc
  * @copyright WP Sharks™
  */
 declare (strict_types = 1);
-namespace WebSharks\WpSharks\WPRedirects\Pro\Traits\Facades;
+namespace WebSharks\WpSharks\WPRedirects\Pro\Classes\Utils;
 
 use WebSharks\WpSharks\WPRedirects\Pro\Classes;
 use WebSharks\WpSharks\WPRedirects\Pro\Interfaces;
@@ -29,21 +29,36 @@ use function assert as debug;
 use function get_defined_vars as vars;
 
 /**
- * Foo (example).
+ * Redirect utils.
  *
- * @since 000000
+ * @since 16xxxxx Initial release.
  */
-trait Foo
+class Redirects extends SCoreClasses\SCore\Base\Core
 {
     /**
-     * @since 000000 Foo example.
+     * On `template_redirect` hook.
      *
-     * @param mixed ...$args Variadic args to underlying utility.
-     *
-     * @see Classes\Utils\Foo::__invoke()
+     * @since 16xxxxx Initial release.
      */
-    public static function foo(...$args)
+    public function onTemplateRedirect()
     {
-        return $GLOBALS[static::class]->Utils->Foo->__invoke(...$args);
+        if (!is_singular('redirect')) {
+            return; // Not applicable.
+        }
+        $redirect_id = (int) get_the_ID();
+
+        $url = (string) s::getPostMeta($redirect_id, '_url');
+        $url = !$url ? home_url('/') : $url;
+
+        $status_code = (string) s::getPostMeta($redirect_id, '_status_code');
+
+        if ($status_code === 'default') {
+            $status_code = s::getOption('default_status_code');
+        }
+        $status_code = (int) $status_code; // Force integer.
+        $status_code = !$status_code ? 301 : $status_code;
+
+        wp_redirect($url, $status_code);
+        exit; // Stop upon redirecting.
     }
 }
