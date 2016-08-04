@@ -31,14 +31,14 @@ use function get_defined_vars as vars;
 /**
  * Post meta box utils.
  *
- * @since 16xxxx Initial release.
+ * @since 160804.29493 Initial release.
  */
 class PostMetaBox extends SCoreClasses\SCore\Base\Core
 {
     /**
      * On admin init.
      *
-     * @since 16xxxx Initial release.
+     * @since 160804.29493 Initial release.
      */
     public function onAdminInit()
     {

@@ -32,14 +32,14 @@ $Form = $this->s::menuPageForm('§save-options');
 ?>
 <?= $Form->openTag(); ?>
     <?= $Form->openTable(
-        __('General Options'),
-        sprintf(__('You can browse our <a href="%1$s" target="_blank">knowledge base</a> to learn more about these options.'), esc_url(s::brandUrl('/kb')))
+        __('General Options', 'wp-redirects'),
+        sprintf(__('You can browse our <a href="%1$s" target="_blank">knowledge base</a> to learn more about these options.', 'wp-redirects'), esc_url(s::brandUrl('/kb')))
     ); ?>
 
         <?= $Form->inputRow([
             'type'  => 'number',
-            'label' => __('Default Status Code'),
-            'tip'   => __('This determines the default HTTP redirect status code when a redirection occurs.'),
+            'label' => __('Default Status Code', 'wp-redirects'),
+            'tip'   => __('This determines the default HTTP redirect status code when a redirection occurs.', 'wp-redirects'),
 
             'name'  => 'default_status_code',
             'value' => s::getOption('default_status_code'),
