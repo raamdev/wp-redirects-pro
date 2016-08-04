@@ -8,7 +8,7 @@ project_namespace                           = WebSharks\\WpSharks\\WPRedirects\\
 project_sub_namespace                       = WpSharksWPRedirectsPro
 
 project_lite_title                          = WP Redirects
-project_lite_slug                           = wp-redirects-lite
+project_lite_slug                           = wp-redirects
 project_lite_text_domain                    = wp-redirects
 
 project_lite_namespace                      = WebSharks\\WpSharks\\WPRedirects
