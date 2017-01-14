@@ -11,7 +11,7 @@ namespace WebSharks\WpSharks\WPRedirects\Pro;
 use WebSharks\WpSharks\WPRedirects\Pro\Classes\App;
 
 if (!defined('WPINC')) {
-    exit('Do NOT access this file directly: '.basename(__FILE__));
+    exit('Do NOT access this file directly.');
 }
 add_action('plugins_loaded', function () {
     require __DIR__.'/wp-sharks-core-rv.php';
