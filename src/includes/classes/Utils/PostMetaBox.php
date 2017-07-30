@@ -86,7 +86,7 @@ class PostMetaBox extends SCoreClasses\SCore\Base\Core
         foreach ($wpDb->get_results($sql) ?: [] as $_r) {
             @preg_match('#'.$_r->regex.'#ui', 'foo://');
 
-            if (!preg_last_error()) {
+            if (preg_last_error() === PREG_NO_ERROR) {
                 $patterns[$_r->regex] = (int) $_r->id;
             } // Only cache valid regex patterns.
         } // unset($_r); // Housekeeping.
