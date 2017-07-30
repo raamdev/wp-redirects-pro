@@ -99,6 +99,19 @@ $Form = $this->s::menuPageForm('§save-options');
             ],
         ]); ?>
 
+        <?= $Form->selectRow([
+            'label' => __('Regex Tests What?', 'wp-redirects'),
+            'tip'   => __('If you create regex patterns in some of your Redirects, what do you want to test in those patterns?', 'wp-redirects'),
+
+            'name'    => 'regex_tests',
+            'value'   => s::getOption('regex_tests'),
+            'options' => [
+                'path'        => __('Path (i.e. /path, no trailing slash &amp; no query)', 'wp-redirects'),
+                'request_uri' => __('Request URI (/path/?query)', 'wp-redirects'),
+                'url'         => __('Full URL (scheme://host/path/?query)', 'wp-redirects'),
+            ],
+        ]); ?>
+
     <?= $Form->closeTable(); ?>
 
     <?= $Form->submitButton(); ?>

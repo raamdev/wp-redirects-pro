@@ -33,6 +33,21 @@ if (!defined('WPINC')) {
 }
 extract($this->vars); // Template variables.
 $Form = $this->s::postMetaBoxForm('redirect-data');
+
+switch (s::getOption('regex_tests')) {
+    case 'url':
+        $regex_tests = __('full URL (<code>scheme://host/path/?query</code>)', 'wp-redirects');
+        break;
+
+    case 'request_uri':
+        $regex_tests = __('request URI (<code>/path/?query</code>)', 'wp-redirects');
+        break;
+
+    case 'path':
+    default: // Default case.
+        $regex_tests = __('path only (i.e. <code>/path</code>, no trailing slash &amp; no query)', 'wp-redirects');
+        break;
+}
 ?>
 <?= $Form->openTable(); ?>
 
@@ -95,8 +110,8 @@ $Form = $this->s::postMetaBoxForm('redirect-data');
 
     <?= $Form->inputRow([
         'label' => __('Regex Pattern', 'wp-redirects'),
-        'tip'   => __('Optionally match any URL served by PHP/WordPress; i.e., if any URL matches a pattern entered here, it will trigger this redirect.', 'wp-redirects'),
-        'note'  => __('<code>#</code><strong>pattern</strong><code>#ui</code> &nbsp;&nbsp; <em>Enter pattern only, excluding delimiters. You\'re testing the current full URL.</em>', 'wp-redirects'),
+        'tip'   => __('Optionally match any location served by PHP/WordPress; i.e., if any location matches a pattern entered here, it will trigger this redirect.', 'wp-redirects'),
+        'note'  => sprintf(__('<code>/^</code><strong>pattern</strong><code>$/ui</code> &nbsp;&nbsp; <em>Enter pattern only, excluding <code>/^</code> and <code>$/ui</code> delimiters.<br />You\'re testing the %1$s from beginning to end.</em>', 'wp-redirects'), $regex_tests),
 
         'name'  => '_regex',
         'value' => s::getPostMeta($post_id, '_regex'),

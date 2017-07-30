@@ -61,11 +61,24 @@ class Redirects extends SCoreClasses\SCore\Base\Core
 
         if (!$patterns || c::isCli()) {
             return; // Nothing to check.
-        } elseif (!($url = c::currentUrl())) {
-            return; // Not possible.
+        }
+        switch (s::getOption('regex_tests')) {
+            case 'url':
+                $regex_tests = c::currentUrl();
+                break;
+
+            case 'request_uri':
+                $regex_tests = c::currentUri();
+                break;
+
+            case 'path':
+            default: // Default case.
+                $regex_tests = c::currentPath();
+                $regex_tests = c::mbRTrim($regex_tests, '/');
+                break;
         }
         foreach ($patterns as $_regex => $_id) {
-            if (preg_match('#'.$_regex.'#ui', $url)) {
+            if (preg_match('/^'.$_regex.'$/ui', $regex_tests)) {
                 $this->maybeRedirect($_id);
             }
         } // unset($_regex, $_id); // Housekeeping.

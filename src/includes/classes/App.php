@@ -42,7 +42,7 @@ class App extends SCoreClasses\App
      *
      * @type string Version.
      */
-    const VERSION = '170730.45068'; //v//
+    const VERSION = '170730.49720'; //v//
 
     /**
      * Constructor.
@@ -91,6 +91,9 @@ class App extends SCoreClasses\App
                 'default_top'           => false,
                 'default_cacheable'     => false,
                 'default_forward_query' => false,
+
+                'regex_tests' => 'path',
+                // `url`, `request_uri`, `path`.
             ],
         ];
         parent::__construct($instance_base, $instance);

@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the WP Redirects Pro package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Redirects Pro 170730.45068\n"
+"Project-Id-Version: WP Redirects Pro 170730.49720\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-redirects-pro\n"
-"POT-Creation-Date: 2017-07-30 12:31:11+00:00\n"
+"POT-Creation-Date: 2017-07-30 13:48:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -237,9 +237,9 @@ msgstr ""
 #: src/includes/templates/admin/menu-pages/options/default.php:74
 #: src/includes/templates/admin/menu-pages/options/default.php:86
 #: src/includes/templates/admin/menu-pages/options/default.php:98
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:66
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:78
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:90
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:81
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:93
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:105
 msgid "Yes"
 msgstr ""
 
@@ -247,9 +247,9 @@ msgstr ""
 #: src/includes/templates/admin/menu-pages/options/default.php:73
 #: src/includes/templates/admin/menu-pages/options/default.php:85
 #: src/includes/templates/admin/menu-pages/options/default.php:97
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:65
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:77
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:89
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:80
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:92
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:104
 msgid "No"
 msgstr ""
 
@@ -285,56 +285,88 @@ msgstr ""
 msgid "This determines the default value for the Forward Query option; i.e., what is already filled-in when creating a new Redirect."
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:41
+#: src/includes/templates/admin/menu-pages/options/default.php:103
+msgid "Regex Tests What?"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:104
+msgid "If you create regex patterns in some of your Redirects, what do you want to test in those patterns?"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:109
+msgid "Path (i.e. /path, no trailing slash &amp; no query)"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:110
+msgid "Request URI (/path/?query)"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:111
+msgid "Full URL (scheme://host/path/?query)"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:39
+msgid "full URL (<code>scheme://host/path/?query</code>)"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:43
+msgid "request URI (<code>/path/?query</code>)"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:48
+msgid "path only (i.e. <code>/path</code>, no trailing slash &amp; no query)"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:56
 msgid "Status Code"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:42
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:57
 msgid "HTTP status code."
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:49
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:64
 msgid "Redirect To"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:50
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:65
 msgid "This is where a visitor will be redirected to."
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:59
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:74
 msgid "Force Top?"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:60
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:75
 msgid "If enabled, this breaks out of frames; i.e., when redirecting, the new URL is always loaded as the top-level document."
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:71
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:86
 msgid "Cacheable?"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:72
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:87
 msgid "Allow a browser to cache the redirection and therefore bypass the original URL on future requests?"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:83
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:98
 msgid "Forward Query?"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:84
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:99
 msgid "Pass query string arguments to new URL?"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:97
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:112
 msgid "Regex Pattern"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:98
-msgid "Optionally match any URL served by PHP/WordPress; i.e., if any URL matches a pattern entered here, it will trigger this redirect."
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:113
+msgid "Optionally match any location served by PHP/WordPress; i.e., if any location matches a pattern entered here, it will trigger this redirect."
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:99
-msgid "<code>#</code><strong>pattern</strong><code>#ui</code> &nbsp;&nbsp; <em>Enter pattern only, excluding delimiters. You're testing the current full URL.</em>"
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:114
+msgid "<code>/^</code><strong>pattern</strong><code>$/ui</code> &nbsp;&nbsp; <em>Enter pattern only, excluding <code>/^</code> and <code>$/ui</code> delimiters.<br />You're testing the %1$s from beginning to end.</em>"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

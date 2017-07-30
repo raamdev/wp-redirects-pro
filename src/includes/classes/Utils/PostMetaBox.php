@@ -81,14 +81,10 @@ class PostMetaBox extends SCoreClasses\SCore\Base\Core
                 AND `meta`.`meta_key` = %s
                 AND `meta`.`meta_value` != \'\'
         ';
-        $wpDb->prepare($sql, s::postMetaKey('_regex'));
+        $sql = $wpDb->prepare($sql, s::postMetaKey('_regex'));
 
         foreach ($wpDb->get_results($sql) ?: [] as $_r) {
-            @preg_match('#'.$_r->regex.'#ui', 'foo://');
-
-            if (preg_last_error() === PREG_NO_ERROR) {
-                $patterns[$_r->regex] = (int) $_r->id;
-            } // Only cache valid regex patterns.
+            $patterns[$_r->regex] = (int) $_r->id;
         } // unset($_r); // Housekeeping.
 
         s::sysOption('regex_patterns', $patterns);
