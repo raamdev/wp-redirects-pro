@@ -59,7 +59,7 @@ class PostMetaBox extends SCoreClasses\SCore\Base\Core
     /**
      * Cache all regex patterns.
      *
-     * @since 16xxxxx Initial release.
+     * @since 170730.42995 Initial release.
      */
     public function cacheRegexPatterns()
     {
@@ -97,7 +97,7 @@ class PostMetaBox extends SCoreClasses\SCore\Base\Core
     /**
      * Check statistics.
      *
-     * @since 16xxxxx Initial release.
+     * @since 170730.42995 Initial release.
      */
     public function checkStats(int $id)
     {

@@ -31,14 +31,14 @@ use function get_defined_vars as vars;
 /**
  * Post type utils.
  *
- * @since 16xxxxx Initial release.
+ * @since 170730.42995 Initial release.
  */
 class PostType extends SCoreClasses\SCore\Base\Core
 {
     /**
      * Capabilities.
      *
-     * @since 16xxxxx
+     * @since 170730.42995
      *
      * @type array Caps.
      */
@@ -47,7 +47,7 @@ class PostType extends SCoreClasses\SCore\Base\Core
     /**
      * Constructor.
      *
-     * @since 16xxxxx Initial release.
+     * @since 170730.42995 Initial release.
      *
      * @param Classes\App $App Application.
      */
@@ -78,7 +78,7 @@ class PostType extends SCoreClasses\SCore\Base\Core
     /**
      * On `init` hook.
      *
-     * @since 16xxxxx Initial release.
+     * @since 170730.42995 Initial release.
      */
     public function onInit()
     {
@@ -200,7 +200,7 @@ class PostType extends SCoreClasses\SCore\Base\Core
     /**
      * On `manage_redirect_posts_columns` filter.
      *
-     * @since 16xxxxx Initial release.
+     * @since 170730.42995 Initial release.
      *
      * @param array|mixed $columns Current columns.
      *
@@ -220,7 +220,7 @@ class PostType extends SCoreClasses\SCore\Base\Core
     /**
      * On `manage_edit-redirect_sortable_columns` filter.
      *
-     * @since 16xxxxx Initial release.
+     * @since 170730.42995 Initial release.
      *
      * @param array|mixed $columns Current columns.
      *
@@ -240,7 +240,7 @@ class PostType extends SCoreClasses\SCore\Base\Core
     /**
      * On `manage_redirect_posts_custom_column` hook.
      *
-     * @since 16xxxxx Initial release.
+     * @since 170730.42995 Initial release.
      *
      * @param string     $column Column key.
      * @param int|string $id     Redirect ID.
@@ -270,7 +270,7 @@ class PostType extends SCoreClasses\SCore\Base\Core
     /**
      * On `pre_get_posts` hook.
      *
-     * @since 16xxxxx Initial release.
+     * @since 170730.42995 Initial release.
      *
      * @param string     $column Column key.
      * @param int|string $id     Redirect ID.

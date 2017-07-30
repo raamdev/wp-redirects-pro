@@ -4,7 +4,7 @@
  *
  * @wp-plugin
  *
- * Version: 170730.42959
+ * Version: 170730.42995
  * Text Domain: wp-redirects
  * Plugin Name: WP Redirects Pro
  *

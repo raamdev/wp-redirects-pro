@@ -31,14 +31,14 @@ use function get_defined_vars as vars;
 /**
  * Redirect utils.
  *
- * @since 16xxxxx Initial release.
+ * @since 170730.42995 Initial release.
  */
 class Redirects extends SCoreClasses\SCore\Base\Core
 {
     /**
      * On `wp` request hook.
      *
-     * @since 16xxxxx Initial release.
+     * @since 170730.42995 Initial release.
      */
     public function onWp()
     {
@@ -52,7 +52,7 @@ class Redirects extends SCoreClasses\SCore\Base\Core
     /**
      * Check regex patterns.
      *
-     * @since 16xxxxx Initial release.
+     * @since 170730.42995 Initial release.
      */
     protected function checkPatterns()
     {
@@ -74,7 +74,7 @@ class Redirects extends SCoreClasses\SCore\Base\Core
     /**
      * Maybe perform redirection.
      *
-     * @since 16xxxxx Initial release.
+     * @since 170730.42995 Initial release.
      *
      * @param int|null $id Redirect ID.
      */
