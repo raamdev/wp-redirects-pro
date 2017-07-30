@@ -46,7 +46,6 @@ $Form = $this->s::postMetaBoxForm('redirect-data');
     ]); ?>
 
     <?= $Form->inputRow([
-        'type'  => 'url',
         'label' => __('Redirect To', 'wp-redirects'),
         'tip'   => __('This is where a visitor will be redirected to.', 'wp-redirects'),
 
