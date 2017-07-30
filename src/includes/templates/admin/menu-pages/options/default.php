@@ -5,7 +5,7 @@
  * @author @jaswsinc
  * @copyright WP Sharks™
  */
-declare (strict_types = 1);
+declare(strict_types=1);
 namespace WebSharks\WpSharks\WPRedirects\Pro\Classes;
 
 use WebSharks\WpSharks\WPRedirects\Pro\Classes;
@@ -39,13 +39,64 @@ $Form = $this->s::menuPageForm('§save-options');
         sprintf(__('You can browse our <a href="%1$s" target="_blank">knowledge base</a> to learn more about these options.', 'wp-redirects'), esc_url(s::brandUrl('/kb')))
     ); ?>
 
+        <?= $Form->selectRow([
+            'label' => __('Record Stats?', 'wp-redirects'),
+            'tip'   => __('Do you want to record the number of hits for each Redirect, and the last time it was accessed?', 'wp-redirects'),
+            'note'  => __('Keep track of Redirect hits &amp; last access time?', 'wp-redirects'),
+
+            'name'    => 'stats_enable',
+            'value'   => s::getOption('stats_enable'),
+            'options' => [
+                '1' => __('Yes', 'wp-redirects'),
+                '0' => __('No', 'wp-redirects'),
+            ],
+        ]); ?>
+
+        <?= $Form->hrRow(); ?>
+
         <?= $Form->inputRow([
             'type'  => 'number',
-            'label' => __('Default Status Code', 'wp-redirects'),
-            'tip'   => __('This determines the default HTTP redirect status code when a redirection occurs.', 'wp-redirects'),
+            'label' => __('HTTP Status Code (Default)', 'wp-redirects'),
+            'tip'   => __('This determines the default HTTP redirect status code; i.e., what is already filled-in when creating a new Redirect.', 'wp-redirects'),
 
-            'name'  => 'default_status_code',
-            'value' => s::getOption('default_status_code'),
+            'name'  => 'default_code',
+            'value' => s::getOption('default_code'),
+        ]); ?>
+
+        <?= $Form->selectRow([
+            'label' => __('Force Top? (Default)', 'wp-redirects'),
+            'tip'   => __('This determines the default value for the Force Top option; i.e., what is already filled-in when creating a new Redirect.', 'wp-redirects'),
+
+            'name'    => 'default_top',
+            'value'   => s::getOption('default_top'),
+            'options' => [
+                '0' => __('No', 'wp-redirects'),
+                '1' => __('Yes', 'wp-redirects'),
+            ],
+        ]); ?>
+
+        <?= $Form->selectRow([
+            'label' => __('Cacheable? (Default)', 'wp-redirects'),
+            'tip'   => __('This determines the default value for the Cacheable option; i.e., what is already filled-in when creating a new Redirect.', 'wp-redirects'),
+
+            'name'    => 'default_cacheable',
+            'value'   => s::getOption('default_cacheable'),
+            'options' => [
+                '0' => __('No', 'wp-redirects'),
+                '1' => __('Yes', 'wp-redirects'),
+            ],
+        ]); ?>
+
+        <?= $Form->selectRow([
+            'label' => __('Forward Query? (Default)', 'wp-redirects'),
+            'tip'   => __('This determines the default value for the Forward Query option; i.e., what is already filled-in when creating a new Redirect.', 'wp-redirects'),
+
+            'name'    => 'default_forward_query',
+            'value'   => s::getOption('default_forward_query'),
+            'options' => [
+                '0' => __('No', 'wp-redirects'),
+                '1' => __('Yes', 'wp-redirects'),
+            ],
         ]); ?>
 
     <?= $Form->closeTable(); ?>

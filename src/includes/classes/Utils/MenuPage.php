@@ -5,7 +5,7 @@
  * @author @jaswsinc
  * @copyright WP Sharks™
  */
-declare (strict_types = 1);
+declare(strict_types=1);
 namespace WebSharks\WpSharks\WPRedirects\Pro\Classes\Utils;
 
 use WebSharks\WpSharks\WPRedirects\Pro\Classes;
@@ -47,12 +47,9 @@ class MenuPage extends SCoreClasses\SCore\Base\Core
             'parent_page'   => 'edit.php?post_type=redirect',
             'template_file' => 'admin/menu-pages/options/default.php',
 
-            'tabs' => [
+            'meta_links' => ['restore' => true],
+            'tabs'       => [
                 'default' => sprintf(__('%1$s', 'wp-redirects'), esc_html($this->App->Config->©brand['©name'])),
-                'restore' => [
-                    'label' => __('Restore Default Options', 'wp-redirects'),
-                    'url'   => s::restoreDefaultOptionsUrl(), 'onclick' => 'confirm',
-                ],
             ],
         ]);
     }

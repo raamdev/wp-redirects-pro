@@ -5,7 +5,7 @@
  * @author @jaswsinc
  * @copyright WP Sharks™
  */
-declare (strict_types = 1);
+declare(strict_types=1);
 namespace WebSharks\WpSharks\WPRedirects\Pro\Traits\Facades;
 
 use WebSharks\WpSharks\WPRedirects\Pro\Classes;
@@ -36,7 +36,7 @@ use function get_defined_vars as vars;
 trait PostType
 {
     /**
-     * @since 160804.29493 Post type utils.
+     * @since 160804.29493 Post type.
      * @see Classes\Utils\PostType::$caps
      */
     public static function postTypeCaps()

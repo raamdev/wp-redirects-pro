@@ -5,7 +5,7 @@
  * @author @jaswsinc
  * @copyright WP Sharks™
  */
-declare (strict_types = 1);
+declare(strict_types=1);
 namespace WebSharks\WpSharks\WPRedirects\Pro\Classes;
 
 use WebSharks\WpSharks\WPRedirects\Pro\Classes;
@@ -37,25 +37,73 @@ $Form = $this->s::postMetaBoxForm('redirect-data');
 <?= $Form->openTable(); ?>
 
     <?= $Form->inputRow([
+        'type'  => 'number',
+        'label' => __('Status Code', 'wp-redirects'),
+        'tip'   => __('HTTP status code.', 'wp-redirects'),
+
+        'name'  => '_code',
+        'value' => s::getPostMeta($post_id, '_code', s::getOption('default_code')),
+    ]); ?>
+
+    <?= $Form->inputRow([
         'type'  => 'url',
-        'label' => __('Redirects To', 'wp-redirects'),
+        'label' => __('Redirect To', 'wp-redirects'),
         'tip'   => __('This is where a visitor will be redirected to.', 'wp-redirects'),
 
         'name'  => '_url',
         'value' => s::getPostMeta($post_id, '_url'),
     ]); ?>
 
-    <?= $Form->selectRow([
-        'label' => __('Redirect Status Code', 'wp-redirects'),
-        'tip'   => __('This is the status code used in the redirection.', 'wp-redirects'),
+    <?= $Form->hrRow(); ?>
 
-        'name'    => '_status_code',
-        'value'   => s::getPostMeta($post_id, '_status_code', 'default'),
+    <?= $Form->selectRow([
+        'label' => __('Force Top?', 'wp-redirects'),
+        'tip'   => __('If enabled, this breaks out of frames; i.e., when redirecting, the new URL is always loaded as the top-level document.', 'wp-redirects'),
+
+        'name'    => '_top',
+        'value'   => s::getPostMeta($post_id, '_top', s::getOption('default_top')),
         'options' => [
-            'default' => __('default', 'wp-redirects'),
-            '301'     => __('301', 'wp-redirects'),
-            '302'     => __('302', 'wp-redirects'),
+            '0' => __('No', 'wp-redirects'),
+            '1' => __('Yes', 'wp-redirects'),
         ],
+    ]); ?>
+
+    <?= $Form->selectRow([
+        'label' => __('Cacheable?', 'wp-redirects'),
+        'tip'   => __('Allow a browser to cache the redirection and therefore bypass the original URL on future requests?', 'wp-redirects'),
+
+        'name'    => '_cacheable',
+        'value'   => s::getPostMeta($post_id, '_cacheable', s::getOption('default_cacheable')),
+        'options' => [
+            '0' => __('No', 'wp-redirects'),
+            '1' => __('Yes', 'wp-redirects'),
+        ],
+    ]); ?>
+
+    <?= $Form->selectRow([
+        'label' => __('Forward Query?', 'wp-redirects'),
+        'tip'   => __('Pass query string arguments to new URL?', 'wp-redirects'),
+
+        'name'    => '_forward_query',
+        'value'   => s::getPostMeta($post_id, '_forward_query', s::getOption('default_forward_query')),
+        'options' => [
+            '0' => __('No', 'wp-redirects'),
+            '1' => __('Yes', 'wp-redirects'),
+        ],
+    ]); ?>
+
+    <?= $Form->hrRow(); ?>
+
+    <?= $Form->inputRow([
+        'label' => __('Regex Pattern', 'wp-redirects'),
+        'tip'   => __('Optionally match any URL served by PHP/WordPress; i.e., if any URL matches a pattern entered here, it will trigger this redirect.', 'wp-redirects'),
+        'note'  => __('<code>#</code><strong>pattern</strong><code>#ui</code> &nbsp;&nbsp; <em>Enter pattern only, excluding delimiters. You\'re testing the current full URL.</em>', 'wp-redirects'),
+
+        'name'  => '_regex',
+        'value' => s::getPostMeta($post_id, '_regex'),
+
+        'class' => '-monospace',
+        'attrs' => 'spellcheck="false"',
     ]); ?>
 
 <?= $Form->closeTable(); ?>

@@ -1,8 +1,8 @@
 === WP Redirects Pro ===
 
-Stable tag: 160804.30130
+Stable tag: 170730.42959
 
-Tested up to: 4.6
+Tested up to: 4.8
 Requires at least: 4.5.3
 
 Text Domain: wp-redirects

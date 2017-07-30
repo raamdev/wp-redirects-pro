@@ -5,7 +5,7 @@
  * @author @jaswsinc
  * @copyright WP Sharks™
  */
-declare (strict_types = 1);
+declare(strict_types=1);
 namespace WebSharks\WpSharks\WPRedirects\Pro\Classes\Utils;
 
 use WebSharks\WpSharks\WPRedirects\Pro\Classes;
@@ -40,7 +40,7 @@ class PostType extends SCoreClasses\SCore\Base\Core
      *
      * @since 16xxxxx
      *
-     * @var array Caps.
+     * @type array Caps.
      */
     public $caps;
 
@@ -92,10 +92,9 @@ class PostType extends SCoreClasses\SCore\Base\Core
                     'author',
                 ],
                 'rewrite' => [
-                    'slug'       => 'r', // e.g., `https://domain/r/...`
+                    'slug'       => 'r',
                     'with_front' => false,
                 ],
-
                 'menu_position' => null,
                 'menu_icon'     => 'dashicons-admin-links',
 
@@ -129,7 +128,7 @@ class PostType extends SCoreClasses\SCore\Base\Core
                     'items_list'            => __('Redirects List', 'wp-redirects'),
                     'items_list_navigation' => __('Redirects List Navigation', 'wp-redirects'),
 
-                    'archives'          => __('Redirects Archives', 'wp-redirects'),
+                    'archives'          => __('Redirect Archives', 'wp-redirects'),
                     'filter_items_list' => __('Filter Redirects List', 'wp-redirects'),
                     'parent_item_colon' => __('Parent Redirect:', 'wp-redirects'),
                 ],
@@ -149,7 +148,7 @@ class PostType extends SCoreClasses\SCore\Base\Core
                 'show_ui'            => true,
                 'show_in_menu'       => true,
                 'show_tagcloud'      => false,
-                'show_in_quick_edit' => false,
+                'show_in_quick_edit' => true,
                 'show_admin_column'  => true,
                 'hierarchical'       => true,
 
@@ -196,5 +195,103 @@ class PostType extends SCoreClasses\SCore\Base\Core
                 ],
             ])
         );
+    }
+
+    /**
+     * On `manage_redirect_posts_columns` filter.
+     *
+     * @since 16xxxxx Initial release.
+     *
+     * @param array|mixed $columns Current columns.
+     *
+     * @return array Filtered columns.
+     */
+    public function onColumns($columns): array
+    {
+        $columns = (array) ($columns ?: []);
+
+        if (s::getOption('stats_enable')) {
+            $columns['_hits']        = __('Hits', 'wp-redirects');
+            $columns['_last_access'] = __('Last Access', 'wp-redirects');
+        }
+        return $columns;
+    }
+
+    /**
+     * On `manage_edit-redirect_sortable_columns` filter.
+     *
+     * @since 16xxxxx Initial release.
+     *
+     * @param array|mixed $columns Current columns.
+     *
+     * @return array Filtered columns.
+     */
+    public function onSortableColumns($columns): array
+    {
+        $columns = (array) ($columns ?: []);
+
+        if (s::getOption('stats_enable')) {
+            $columns['_hits']        = s::postMetaKey('_hits');
+            $columns['_last_access'] = s::postMetaKey('_last_access');
+        }
+        return $columns;
+    }
+
+    /**
+     * On `manage_redirect_posts_custom_column` hook.
+     *
+     * @since 16xxxxx Initial release.
+     *
+     * @param string     $column Column key.
+     * @param int|string $id     Redirect ID.
+     */
+    public function onColumnValue($column, $id)
+    {
+        $id     = (int) $id;
+        $column = (string) $column;
+
+        if (s::getOption('stats_enable')) {
+            switch ($column) {
+                case '_hits':
+                    echo (string) (int) s::getPostMeta($id, '_hits');
+                    break;
+
+                case '_last_access':
+                    if (!($last_access = (int) s::getPostMeta($id, '_last_access'))) {
+                        echo __('never', 'wp-redirects');
+                    } else {
+                        echo sprintf(__('%1$s ago', 'wp-redirects'), human_time_diff(time(), $last_access));
+                    }
+                    break;
+            }
+        }
+    }
+
+    /**
+     * On `pre_get_posts` hook.
+     *
+     * @since 16xxxxx Initial release.
+     *
+     * @param string     $column Column key.
+     * @param int|string $id     Redirect ID.
+     */
+    public function onPreGetPosts(\WP_Query $WP_Query)
+    {
+        if (!$this->Wp->is_admin) {
+            return; // Not applicable.
+        }
+        if (s::getOption('stats_enable')) {
+            switch ($WP_Query->get('orderby')) {
+                case s::postMetaKey('_hits'):
+                    $WP_Query->set('orderby', 'meta_value_num');
+                    $WP_Query->set('meta_key', s::postMetaKey('_hits'));
+                    break;
+
+                case s::postMetaKey('_last_access'):
+                    $WP_Query->set('orderby', 'meta_value_num');
+                    $WP_Query->set('meta_key', s::postMetaKey('_last_access'));
+                    break;
+            }
+        }
     }
 }

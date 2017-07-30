@@ -5,7 +5,7 @@
  * @author @jaswsinc
  * @copyright WP Sharks™
  */
-declare (strict_types = 1);
+declare(strict_types=1);
 namespace WebSharks\WpSharks\WPRedirects\Pro\Classes;
 
 use WebSharks\WpSharks\WPRedirects\Pro\Classes;
@@ -40,9 +40,9 @@ class App extends SCoreClasses\App
      *
      * @since 160804.29493
      *
-     * @var string Version.
+     * @type string Version.
      */
-    const VERSION = '160804.30130'; //v//
+    const VERSION = '170730.42959'; //v//
 
     /**
      * Constructor.
@@ -53,7 +53,15 @@ class App extends SCoreClasses\App
      */
     public function __construct(array $instance = [])
     {
+        $Core = $GLOBALS[SCoreClasses\App::class];
+
         $instance_base = [
+            '©di' => [
+                '©default_rule' => [
+                    'new_instances' => [],
+                ],
+            ],
+
             '§specs' => [
                 '§in_wp'           => false,
                 '§is_network_wide' => false,
@@ -77,7 +85,12 @@ class App extends SCoreClasses\App
                 // Nothing here.
             ],
             '§default_options' => [
-                'default_status_code' => 301,
+                'stats_enable' => true,
+
+                'default_code'          => 301,
+                'default_top'           => false,
+                'default_cacheable'     => false,
+                'default_forward_query' => false,
             ],
         ];
         parent::__construct($instance_base, $instance);
@@ -106,8 +119,18 @@ class App extends SCoreClasses\App
         parent::onSetupOtherHooks();
 
         add_action('init', [$this->Utils->PostType, 'onInit']);
-        add_action('admin_menu', [$this->Utils->MenuPage, 'onAdminMenu']);
-        add_action('admin_init', [$this->Utils->PostMetaBox, 'onAdminInit']);
-        add_action('template_redirect', [$this->Utils->Redirects, 'onTemplateRedirect']);
+
+        if ($this->Wp->is_admin) {
+            add_action('admin_menu', [$this->Utils->MenuPage, 'onAdminMenu']);
+            add_action('admin_init', [$this->Utils->PostMetaBox, 'onAdminInit']);
+
+            add_filter('manage_redirect_posts_columns', [$this->Utils->PostType, 'onColumns']);
+            add_filter('manage_edit-redirect_sortable_columns', [$this->Utils->PostType, 'onSortableColumns']);
+            add_action('manage_redirect_posts_custom_column', [$this->Utils->PostType, 'onColumnValue'], 10, 2);
+            add_action('pre_get_posts', [$this->Utils->PostType, 'onPreGetPosts']);
+        } else {
+            add_action('wp', [$this->Utils->Redirects, 'onWp'], -1000000);
+            // Before security gates in our other plugins.
+        }
     }
 }
