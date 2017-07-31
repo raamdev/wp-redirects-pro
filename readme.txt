@@ -1,6 +1,6 @@
 === WP Redirects Pro ===
 
-Stable tag: 170731.4430
+Stable tag: 170731.4865
 
 Tested up to: 4.8
 Requires at least: 4.5.3
