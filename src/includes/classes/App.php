@@ -94,8 +94,8 @@ class App extends SCoreClasses\App
                 'default_forward_query' => false,
 
                 'regex_tests'       => 'path',
-                'regex_open_delim'  => '/^',
-                'regex_close_delim' => '$/ui',
+                'regex_open_delim'  => '#^',
+                'regex_close_delim' => '$#ui',
             ],
         ];
         parent::__construct($instance_base, $instance);
