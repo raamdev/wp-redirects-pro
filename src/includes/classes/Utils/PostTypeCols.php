@@ -31,14 +31,14 @@ use function get_defined_vars as vars;
 /**
  * Post type cols.
  *
- * @since 17xxxx Refactor.
+ * @since 170731.4430 Refactor.
  */
 class PostTypeCols extends SCoreClasses\SCore\Base\Core
 {
     /**
      * On `admin_init` hook.
      *
-     * @since 17xxxx Refactor custom columns.
+     * @since 170731.4430 Refactor custom columns.
      */
     public function onAdminInit()
     {
@@ -57,7 +57,7 @@ class PostTypeCols extends SCoreClasses\SCore\Base\Core
     /**
      * On `manage_redirect_posts_columns` filter.
      *
-     * @since 17xxxx Refactor custom columns.
+     * @since 170731.4430 Refactor custom columns.
      *
      * @param array|mixed $columns Current columns.
      *
@@ -84,7 +84,7 @@ class PostTypeCols extends SCoreClasses\SCore\Base\Core
     /**
      * On `manage_edit-redirect_sortable_columns` filter.
      *
-     * @since 17xxxx Refactor custom columns.
+     * @since 170731.4430 Refactor custom columns.
      *
      * @param array|mixed $columns Current columns.
      *
@@ -111,7 +111,7 @@ class PostTypeCols extends SCoreClasses\SCore\Base\Core
     /**
      * On `manage_redirect_posts_custom_column` hook.
      *
-     * @since 17xxxx Refactor custom columns.
+     * @since 170731.4430 Refactor custom columns.
      *
      * @param string     $column Column key.
      * @param int|string $id     Redirect ID.
@@ -165,7 +165,7 @@ class PostTypeCols extends SCoreClasses\SCore\Base\Core
     /**
      * On `pre_get_posts` hook.
      *
-     * @since 17xxxx Refactor custom columns.
+     * @since 170731.4430 Refactor custom columns.
      *
      * @param string     $column Column key.
      * @param int|string $id     Redirect ID.
