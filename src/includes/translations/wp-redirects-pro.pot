@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the WP Redirects Pro package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Redirects Pro 170730.49720\n"
+"Project-Id-Version: WP Redirects Pro 170731.4372\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-redirects-pro\n"
-"POT-Creation-Date: 2017-07-30 13:48:43+00:00\n"
+"POT-Creation-Date: 2017-07-31 01:12:55+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,196 +20,232 @@ msgstr ""
 msgid "%1$s"
 msgstr ""
 
+#: src/includes/classes/Utils/MenuPage.php:53
+#: src/includes/classes/Utils/PostTypeCols.php:75
+msgid "Regex"
+msgstr ""
+
+#: src/includes/classes/Utils/MenuPage.php:54
+msgid "Defaults"
+msgstr ""
+
 #: src/includes/classes/Utils/PostMetaBox.php:49
 msgid "Redirect Data"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:101
+#: src/includes/classes/Utils/PostType.php:102
 msgid "Redirections."
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:104
-#: src/includes/classes/Utils/PostType.php:108
+#: src/includes/classes/Utils/PostType.php:105
+#: src/includes/classes/Utils/PostType.php:109
 msgid "Redirects"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:105
-#: src/includes/classes/Utils/PostType.php:107
+#: src/includes/classes/Utils/PostType.php:106
+#: src/includes/classes/Utils/PostType.php:108
 msgid "Redirect"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:110
+#: src/includes/classes/Utils/PostType.php:111
 msgid "All Redirects"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:111
+#: src/includes/classes/Utils/PostType.php:112
 msgid "Add Redirect"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:112
+#: src/includes/classes/Utils/PostType.php:113
 msgid "Add New Redirect"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:113
+#: src/includes/classes/Utils/PostType.php:114
 msgid "New Redirect"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:114
+#: src/includes/classes/Utils/PostType.php:115
 msgid "Edit Redirect"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:115
+#: src/includes/classes/Utils/PostType.php:116
 msgid "View Redirect"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:117
+#: src/includes/classes/Utils/PostType.php:118
 msgid "Search Redirects"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:118
+#: src/includes/classes/Utils/PostType.php:119
 msgid "No Redirects Found"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:119
+#: src/includes/classes/Utils/PostType.php:120
 msgid "No Redirects Found in Trash"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:121
+#: src/includes/classes/Utils/PostType.php:122
 msgid "Insert Into Redirect"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:122
+#: src/includes/classes/Utils/PostType.php:123
 msgid "Upload to this Redirect"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:124
+#: src/includes/classes/Utils/PostType.php:125
 msgid "Set Featured Image"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:125
+#: src/includes/classes/Utils/PostType.php:126
 msgid "Remove Featured Image"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:126
+#: src/includes/classes/Utils/PostType.php:127
 msgid "Use as Featured Image"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:128
+#: src/includes/classes/Utils/PostType.php:129
 msgid "Redirects List"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:129
+#: src/includes/classes/Utils/PostType.php:130
 msgid "Redirects List Navigation"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:131
+#: src/includes/classes/Utils/PostType.php:132
 msgid "Redirect Archives"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:132
+#: src/includes/classes/Utils/PostType.php:133
 msgid "Filter Redirects List"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:133
+#: src/includes/classes/Utils/PostType.php:134
 msgid "Parent Redirect:"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:157
-#: src/includes/classes/Utils/PostType.php:160
+#: src/includes/classes/Utils/PostType.php:158
 msgid "Redirect Categories"
 msgstr ""
 
 #: src/includes/classes/Utils/PostType.php:161
-#: src/includes/classes/Utils/PostType.php:163
-msgid "Redirect Category"
-msgstr ""
-
-#: src/includes/classes/Utils/PostType.php:164
+#: src/includes/classes/Utils/PostType.php:165
 msgid "Categories"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:166
-#: src/includes/classes/Utils/PostType.php:184
-msgid "All Categories"
+#: src/includes/classes/Utils/PostType.php:162
+#: src/includes/classes/Utils/PostType.php:164
+msgid "Category"
 msgstr ""
 
 #: src/includes/classes/Utils/PostType.php:167
-msgid "Add New Category"
+#: src/includes/classes/Utils/PostType.php:185
+msgid "All Categories"
 msgstr ""
 
 #: src/includes/classes/Utils/PostType.php:168
-msgid "New Category Name"
+msgid "Add New Category"
 msgstr ""
 
 #: src/includes/classes/Utils/PostType.php:169
-msgid "Add or Remove Categories"
+msgid "New Category Name"
 msgstr ""
 
 #: src/includes/classes/Utils/PostType.php:170
-msgid "View Category"
+msgid "Add or Remove Categories"
 msgstr ""
 
 #: src/includes/classes/Utils/PostType.php:171
-msgid "Edit Category"
+msgid "View Category"
 msgstr ""
 
 #: src/includes/classes/Utils/PostType.php:172
+msgid "Edit Category"
+msgstr ""
+
+#: src/includes/classes/Utils/PostType.php:173
 msgid "Update Category"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:174
+#: src/includes/classes/Utils/PostType.php:175
 msgid "Search Categories"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:175
+#: src/includes/classes/Utils/PostType.php:176
 msgid "No Categories Found"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:176
+#: src/includes/classes/Utils/PostType.php:177
 msgid "No Categories"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:178
+#: src/includes/classes/Utils/PostType.php:179
 msgid "Choose From the Most Used Categories"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:179
+#: src/includes/classes/Utils/PostType.php:180
 msgid "Separate Categories w/ Commas"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:181
+#: src/includes/classes/Utils/PostType.php:182
 msgid "Categories List"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:182
+#: src/includes/classes/Utils/PostType.php:183
 msgid "Categories List Navigation"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:185
+#: src/includes/classes/Utils/PostType.php:186
 msgid "Popular Categories"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:186
+#: src/includes/classes/Utils/PostType.php:187
 msgid "Parent Category"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:187
+#: src/includes/classes/Utils/PostType.php:188
 msgid "Parent Category:"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:214
+#: src/includes/classes/Utils/PostTypeCols.php:70
+#: src/includes/templates/admin/menu-pages/options/defaults.php:44
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:68
+msgid "Status Code"
+msgstr ""
+
+#: src/includes/classes/Utils/PostTypeCols.php:71
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:77
+msgid "Redirect To"
+msgstr ""
+
+#: src/includes/classes/Utils/PostTypeCols.php:72
+#: src/includes/templates/admin/menu-pages/options/defaults.php:52
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:87
+msgid "Force Top"
+msgstr ""
+
+#: src/includes/classes/Utils/PostTypeCols.php:73
+#: src/includes/templates/admin/menu-pages/options/defaults.php:64
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:99
+msgid "Cacheable"
+msgstr ""
+
+#: src/includes/classes/Utils/PostTypeCols.php:74
+msgid "Fwd Query"
+msgstr ""
+
+#: src/includes/classes/Utils/PostTypeCols.php:78
 msgid "Hits"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:215
+#: src/includes/classes/Utils/PostTypeCols.php:79
 msgid "Last Access"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:261
+#: src/includes/classes/Utils/PostTypeCols.php:156
 msgid "never"
 msgstr ""
 
-#: src/includes/classes/Utils/PostType.php:263
+#: src/includes/classes/Utils/PostTypeCols.php:158
 msgid "%1$s ago"
 msgstr ""
 
@@ -218,91 +254,120 @@ msgid "General Options"
 msgstr ""
 
 #: src/includes/templates/admin/menu-pages/options/default.php:39
+#: src/includes/templates/admin/menu-pages/options/defaults.php:39
 msgid "You can browse our <a href=\"%1$s\" target=\"_blank\">knowledge base</a> to learn more about these options."
 msgstr ""
 
 #: src/includes/templates/admin/menu-pages/options/default.php:43
-msgid "Record Stats?"
+msgid "Rewrite Prefix"
 msgstr ""
 
 #: src/includes/templates/admin/menu-pages/options/default.php:44
-msgid "Do you want to record the number of hits for each Redirect, and the last time it was accessed?"
+msgid "This establishes a slug prefix that appears in front of all Redirect permalinks.<hr /><code>[a-z0-9\\-]+</code> only."
 msgstr ""
 
 #: src/includes/templates/admin/menu-pages/options/default.php:45
+msgid "%1$s/<code>%2$s</code>/my-redirect"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:55
+msgid "Record Stats?"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:56
+msgid "Do you want to record the number of hits for each Redirect, and the last time it was accessed?"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/default.php:57
 msgid "Keep track of Redirect hits &amp; last access time?"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/options/default.php:50
-#: src/includes/templates/admin/menu-pages/options/default.php:74
-#: src/includes/templates/admin/menu-pages/options/default.php:86
-#: src/includes/templates/admin/menu-pages/options/default.php:98
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:81
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:93
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:105
+#: src/includes/templates/admin/menu-pages/options/default.php:62
+#: src/includes/templates/admin/menu-pages/options/defaults.php:59
+#: src/includes/templates/admin/menu-pages/options/defaults.php:71
+#: src/includes/templates/admin/menu-pages/options/defaults.php:83
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:94
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:106
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:118
 msgid "Yes"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/options/default.php:51
-#: src/includes/templates/admin/menu-pages/options/default.php:73
-#: src/includes/templates/admin/menu-pages/options/default.php:85
-#: src/includes/templates/admin/menu-pages/options/default.php:97
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:80
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:92
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:104
+#: src/includes/templates/admin/menu-pages/options/default.php:63
+#: src/includes/templates/admin/menu-pages/options/defaults.php:58
+#: src/includes/templates/admin/menu-pages/options/defaults.php:70
+#: src/includes/templates/admin/menu-pages/options/defaults.php:82
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:93
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:105
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:117
 msgid "No"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/options/default.php:59
-msgid "HTTP Status Code (Default)"
+#: src/includes/templates/admin/menu-pages/options/defaults.php:38
+msgid "Redirect Defaults"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/options/default.php:60
+#: src/includes/templates/admin/menu-pages/options/defaults.php:45
 msgid "This determines the default HTTP redirect status code; i.e., what is already filled-in when creating a new Redirect."
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/options/default.php:67
-msgid "Force Top? (Default)"
-msgstr ""
-
-#: src/includes/templates/admin/menu-pages/options/default.php:68
+#: src/includes/templates/admin/menu-pages/options/defaults.php:53
 msgid "This determines the default value for the Force Top option; i.e., what is already filled-in when creating a new Redirect."
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/options/default.php:79
-msgid "Cacheable? (Default)"
-msgstr ""
-
-#: src/includes/templates/admin/menu-pages/options/default.php:80
+#: src/includes/templates/admin/menu-pages/options/defaults.php:65
 msgid "This determines the default value for the Cacheable option; i.e., what is already filled-in when creating a new Redirect."
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/options/default.php:91
-msgid "Forward Query? (Default)"
+#: src/includes/templates/admin/menu-pages/options/defaults.php:76
+msgid "Forward Query"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/options/default.php:92
+#: src/includes/templates/admin/menu-pages/options/defaults.php:77
 msgid "This determines the default value for the Forward Query option; i.e., what is already filled-in when creating a new Redirect."
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/options/default.php:103
-msgid "Regex Tests What?"
+#: src/includes/templates/admin/menu-pages/options/regex.php:38
+msgid "Regex Options"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/options/default.php:104
-msgid "If you create regex patterns in some of your Redirects, what do you want to test in those patterns?"
+#: src/includes/templates/admin/menu-pages/options/regex.php:39
+msgid "<strong>WARNING:</strong> Changing any of these global options may negatively impact existing regex patterns."
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/options/default.php:109
-msgid "Path (i.e. /path, no trailing slash &amp; no query)"
+#: src/includes/templates/admin/menu-pages/options/regex.php:43
+msgid "Regex Tests"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/options/default.php:110
-msgid "Request URI (/path/?query)"
+#: src/includes/templates/admin/menu-pages/options/regex.php:44
+msgid "If you create regex patterns in some Redirects, what do you want to test in those patterns?"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/options/default.php:111
+#: src/includes/templates/admin/menu-pages/options/regex.php:49
 msgid "Full URL (scheme://host/path/?query)"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/regex.php:50
+msgid "Request URI (i.e. /path/?query, no scheme://host)"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/regex.php:51
+msgid "Path Only (i.e. /path, no trailing slash or query)"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/regex.php:56
+msgid "Opening Delimiter"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/regex.php:57
+msgid "Opening delimiter that is used to process regex patterns.<hr /> Defauts to <code>/^</code><hr />If you set this to an empty string, your patterns can have their own opening delimiter."
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/regex.php:67
+msgid "Closing Delimiter/Flags"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/options/regex.php:68
+msgid "Closing delimiter/flags that is used to process regex patterns.<hr /> Defauts to <code>$/ui</code><hr />If set to an empty string, your patterns can have their own closing delimiter/flags."
 msgstr ""
 
 #: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:39
@@ -310,63 +375,67 @@ msgid "full URL (<code>scheme://host/path/?query</code>)"
 msgstr ""
 
 #: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:43
-msgid "request URI (<code>/path/?query</code>)"
+msgid "request URI (i.e., <code>/path/?query</code>, no scheme://host)"
 msgstr ""
 
 #: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:48
 msgid "path only (i.e. <code>/path</code>, no trailing slash &amp; no query)"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:56
-msgid "Status Code"
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:55
+msgid "<code>%1$s</code><strong>pattern</strong><code>%2$s</code> &nbsp;&nbsp; <em>Enter pattern only, excluding <code>%1$s</code> and <code>%2$s</code> delimiters.<br />You're testing the %3$s.</em>"
 msgstr ""
 
 #: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:57
+msgid "<code>%1$s</code><strong>pattern</strong> &nbsp;&nbsp; <em>Enter pattern only, excluding <code>%1$s</code> delimiter.<br />You're testing the %2$s.</em>"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:59
+msgid "<strong>pattern</strong><code>%1$s</code> &nbsp;&nbsp; <em>Enter pattern only, excluding <code>%1$s</code> delimiter.<br />You're testing the %2$s.</em>"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:61
+msgid "<strong>pattern</strong> &nbsp;&nbsp; <em>Enter a valid regex pattern, including <code>/.../ui</code> delimiters.<br />You're testing the %1$s.</em>"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:69
 msgid "HTTP status code."
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:64
-msgid "Redirect To"
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:76
+msgid "http://..., or a local /request/uri"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:65
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:78
 msgid "This is where a visitor will be redirected to."
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:74
-msgid "Force Top?"
-msgstr ""
-
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:75
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:88
 msgid "If enabled, this breaks out of frames; i.e., when redirecting, the new URL is always loaded as the top-level document."
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:86
-msgid "Cacheable?"
-msgstr ""
-
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:87
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:100
 msgid "Allow a browser to cache the redirection and therefore bypass the original URL on future requests?"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:98
-msgid "Forward Query?"
-msgstr ""
-
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:99
-msgid "Pass query string arguments to new URL?"
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:111
+msgid "Fwd. Query"
 msgstr ""
 
 #: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:112
+msgid "Forward query string arguments to new URL?"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:125
+msgid "no pattern"
+msgstr ""
+
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:126
 msgid "Regex Pattern"
 msgstr ""
 
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:113
-msgid "Optionally match any location served by PHP/WordPress; i.e., if any location matches a pattern entered here, it will trigger this redirect."
-msgstr ""
-
-#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:114
-msgid "<code>/^</code><strong>pattern</strong><code>$/ui</code> &nbsp;&nbsp; <em>Enter pattern only, excluding <code>/^</code> and <code>$/ui</code> delimiters.<br />You're testing the %1$s from beginning to end.</em>"
+#: src/includes/templates/admin/menu-pages/post-meta-box/redirect-data.php:128
+msgid "Optionally match any location served by PHP/WordPress; i.e., if any location matches a pattern entered here, it too, will trigger this redirect."
 msgstr ""
 
 #. Plugin Name of the plugin/theme

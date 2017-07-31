@@ -40,13 +40,25 @@ switch (s::getOption('regex_tests')) {
         break;
 
     case 'request_uri':
-        $regex_tests = __('request URI (<code>/path/?query</code>)', 'wp-redirects');
+        $regex_tests = __('request URI (i.e., <code>/path/?query</code>, no scheme://host)', 'wp-redirects');
         break;
 
     case 'path':
     default: // Default case.
         $regex_tests = __('path only (i.e. <code>/path</code>, no trailing slash &amp; no query)', 'wp-redirects');
         break;
+}
+$regex_open_delim  = s::getOption('regex_open_delim');
+$regex_close_delim = s::getOption('regex_close_delim');
+
+if ($regex_open_delim && $regex_close_delim) {
+    $regex_note = sprintf(__('<code>%1$s</code><strong>pattern</strong><code>%2$s</code> &nbsp;&nbsp; <em>Enter pattern only, excluding <code>%1$s</code> and <code>%2$s</code> delimiters.<br />You\'re testing the %3$s.</em>', 'wp-redirects'), esc_html($regex_open_delim), esc_html($regex_close_delim), $regex_tests);
+} elseif ($regex_open_delim) {
+    $regex_note = sprintf(__('<code>%1$s</code><strong>pattern</strong> &nbsp;&nbsp; <em>Enter pattern only, excluding <code>%1$s</code> delimiter.<br />You\'re testing the %2$s.</em>', 'wp-redirects'), esc_html($regex_open_delim), $regex_tests);
+} elseif ($regex_close_delim) {
+    $regex_note = sprintf(__('<strong>pattern</strong><code>%1$s</code> &nbsp;&nbsp; <em>Enter pattern only, excluding <code>%1$s</code> delimiter.<br />You\'re testing the %2$s.</em>', 'wp-redirects'), esc_html($regex_close_delim), $regex_tests);
+} else {
+    $regex_note = sprintf(__('<strong>pattern</strong> &nbsp;&nbsp; <em>Enter a valid regex pattern, including <code>/.../ui</code> delimiters.<br />You\'re testing the %1$s.</em>', 'wp-redirects'), $regex_tests);
 }
 ?>
 <?= $Form->openTable(); ?>
@@ -61,8 +73,9 @@ switch (s::getOption('regex_tests')) {
     ]); ?>
 
     <?= $Form->inputRow([
-        'label' => __('Redirect To', 'wp-redirects'),
-        'tip'   => __('This is where a visitor will be redirected to.', 'wp-redirects'),
+        'placeholder' => __('http://..., or a local /request/uri', 'wp-redirects'),
+        'label'       => __('Redirect To', 'wp-redirects'),
+        'tip'         => __('This is where a visitor will be redirected to.', 'wp-redirects'),
 
         'name'  => '_url',
         'value' => s::getPostMeta($post_id, '_url'),
@@ -71,7 +84,7 @@ switch (s::getOption('regex_tests')) {
     <?= $Form->hrRow(); ?>
 
     <?= $Form->selectRow([
-        'label' => __('Force Top?', 'wp-redirects'),
+        'label' => __('Force Top', 'wp-redirects'),
         'tip'   => __('If enabled, this breaks out of frames; i.e., when redirecting, the new URL is always loaded as the top-level document.', 'wp-redirects'),
 
         'name'    => '_top',
@@ -83,7 +96,7 @@ switch (s::getOption('regex_tests')) {
     ]); ?>
 
     <?= $Form->selectRow([
-        'label' => __('Cacheable?', 'wp-redirects'),
+        'label' => __('Cacheable', 'wp-redirects'),
         'tip'   => __('Allow a browser to cache the redirection and therefore bypass the original URL on future requests?', 'wp-redirects'),
 
         'name'    => '_cacheable',
@@ -95,8 +108,8 @@ switch (s::getOption('regex_tests')) {
     ]); ?>
 
     <?= $Form->selectRow([
-        'label' => __('Forward Query?', 'wp-redirects'),
-        'tip'   => __('Pass query string arguments to new URL?', 'wp-redirects'),
+        'label' => __('Fwd. Query', 'wp-redirects'),
+        'tip'   => __('Forward query string arguments to new URL?', 'wp-redirects'),
 
         'name'    => '_forward_query',
         'value'   => s::getPostMeta($post_id, '_forward_query', s::getOption('default_forward_query')),
@@ -109,9 +122,11 @@ switch (s::getOption('regex_tests')) {
     <?= $Form->hrRow(); ?>
 
     <?= $Form->inputRow([
-        'label' => __('Regex Pattern', 'wp-redirects'),
-        'tip'   => __('Optionally match any location served by PHP/WordPress; i.e., if any location matches a pattern entered here, it will trigger this redirect.', 'wp-redirects'),
-        'note'  => sprintf(__('<code>/^</code><strong>pattern</strong><code>$/ui</code> &nbsp;&nbsp; <em>Enter pattern only, excluding <code>/^</code> and <code>$/ui</code> delimiters.<br />You\'re testing the %1$s from beginning to end.</em>', 'wp-redirects'), $regex_tests),
+        'placeholder' => __('no pattern', 'wp-redirects'),
+        'label'       => __('Regex Pattern', 'wp-redirects'),
+
+        'tip'  => __('Optionally match any location served by PHP/WordPress; i.e., if any location matches a pattern entered here, it too, will trigger this redirect.', 'wp-redirects'),
+        'note' => $regex_note, // Changes, based on configuration options.
 
         'name'  => '_regex',
         'value' => s::getPostMeta($post_id, '_regex'),

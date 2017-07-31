@@ -39,6 +39,18 @@ $Form = $this->s::menuPageForm('§save-options');
         sprintf(__('You can browse our <a href="%1$s" target="_blank">knowledge base</a> to learn more about these options.', 'wp-redirects'), esc_url(s::brandUrl('/kb')))
     ); ?>
 
+        <?= $Form->inputRow([
+            'label' => __('Rewrite Prefix', 'wp-redirects'),
+            'tip'   => __('This establishes a slug prefix that appears in front of all Redirect permalinks.<hr /><code>[a-z0-9\-]+</code> only.', 'wp-redirects'),
+            'note'  => sprintf(__('%1$s/<code>%2$s</code>/my-redirect', 'wp-redirects'), esc_html($this->Wp->home_url), esc_html(s::getOption('rewrite_prefix') ?: s::getDefaultOption('rewrite_prefix'))),
+
+            'name'    => 'rewrite_prefix',
+            'value'   => s::getOption('rewrite_prefix'),
+
+            'placeholder' => s::getDefaultOption('rewrite_prefix'),
+            'attrs'       => 'pattern="[a-z0-9\-]+" title="[a-z0-9\-]+"',
+        ]); ?>
+
         <?= $Form->selectRow([
             'label' => __('Record Stats?', 'wp-redirects'),
             'tip'   => __('Do you want to record the number of hits for each Redirect, and the last time it was accessed?', 'wp-redirects'),
@@ -49,66 +61,6 @@ $Form = $this->s::menuPageForm('§save-options');
             'options' => [
                 '1' => __('Yes', 'wp-redirects'),
                 '0' => __('No', 'wp-redirects'),
-            ],
-        ]); ?>
-
-        <?= $Form->hrRow(); ?>
-
-        <?= $Form->inputRow([
-            'type'  => 'number',
-            'label' => __('HTTP Status Code (Default)', 'wp-redirects'),
-            'tip'   => __('This determines the default HTTP redirect status code; i.e., what is already filled-in when creating a new Redirect.', 'wp-redirects'),
-
-            'name'  => 'default_code',
-            'value' => s::getOption('default_code'),
-        ]); ?>
-
-        <?= $Form->selectRow([
-            'label' => __('Force Top? (Default)', 'wp-redirects'),
-            'tip'   => __('This determines the default value for the Force Top option; i.e., what is already filled-in when creating a new Redirect.', 'wp-redirects'),
-
-            'name'    => 'default_top',
-            'value'   => s::getOption('default_top'),
-            'options' => [
-                '0' => __('No', 'wp-redirects'),
-                '1' => __('Yes', 'wp-redirects'),
-            ],
-        ]); ?>
-
-        <?= $Form->selectRow([
-            'label' => __('Cacheable? (Default)', 'wp-redirects'),
-            'tip'   => __('This determines the default value for the Cacheable option; i.e., what is already filled-in when creating a new Redirect.', 'wp-redirects'),
-
-            'name'    => 'default_cacheable',
-            'value'   => s::getOption('default_cacheable'),
-            'options' => [
-                '0' => __('No', 'wp-redirects'),
-                '1' => __('Yes', 'wp-redirects'),
-            ],
-        ]); ?>
-
-        <?= $Form->selectRow([
-            'label' => __('Forward Query? (Default)', 'wp-redirects'),
-            'tip'   => __('This determines the default value for the Forward Query option; i.e., what is already filled-in when creating a new Redirect.', 'wp-redirects'),
-
-            'name'    => 'default_forward_query',
-            'value'   => s::getOption('default_forward_query'),
-            'options' => [
-                '0' => __('No', 'wp-redirects'),
-                '1' => __('Yes', 'wp-redirects'),
-            ],
-        ]); ?>
-
-        <?= $Form->selectRow([
-            'label' => __('Regex Tests What?', 'wp-redirects'),
-            'tip'   => __('If you create regex patterns in some of your Redirects, what do you want to test in those patterns?', 'wp-redirects'),
-
-            'name'    => 'regex_tests',
-            'value'   => s::getOption('regex_tests'),
-            'options' => [
-                'path'        => __('Path (i.e. /path, no trailing slash &amp; no query)', 'wp-redirects'),
-                'request_uri' => __('Request URI (/path/?query)', 'wp-redirects'),
-                'url'         => __('Full URL (scheme://host/path/?query)', 'wp-redirects'),
             ],
         ]); ?>
 

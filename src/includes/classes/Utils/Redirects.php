@@ -64,21 +64,24 @@ class Redirects extends SCoreClasses\SCore\Base\Core
         }
         switch (s::getOption('regex_tests')) {
             case 'url':
-                $regex_tests = c::currentUrl();
+                $tests = c::currentUrl();
                 break;
 
             case 'request_uri':
-                $regex_tests = c::currentUri();
+                $tests = c::currentUri();
                 break;
 
             case 'path':
             default: // Default case.
-                $regex_tests = c::currentPath();
-                $regex_tests = c::mbRTrim($regex_tests, '/');
+                $tests = c::currentPath();
+                $tests = c::mbRTrim($tests, '/');
                 break;
         }
+        $open_delim  = s::getOption('regex_open_delim');
+        $close_delim = s::getOption('regex_close_delim');
+
         foreach ($patterns as $_regex => $_id) {
-            if (preg_match('/^'.$_regex.'$/ui', $regex_tests)) {
+            if (preg_match($open_delim.$_regex.$close_delim, $tests)) {
                 $this->maybeRedirect($_id);
             }
         } // unset($_regex, $_id); // Housekeeping.

@@ -42,7 +42,7 @@ class App extends SCoreClasses\App
      *
      * @type string Version.
      */
-    const VERSION = '170730.49720'; //v//
+    const VERSION = '170731.4372'; //v//
 
     /**
      * Constructor.
@@ -85,15 +85,17 @@ class App extends SCoreClasses\App
                 // Nothing here.
             ],
             '§default_options' => [
-                'stats_enable' => true,
+                'rewrite_prefix'  => 'r',
+                'stats_enable'    => true,
 
                 'default_code'          => 301,
                 'default_top'           => false,
-                'default_cacheable'     => false,
+                'default_cacheable'     => true,
                 'default_forward_query' => false,
 
-                'regex_tests' => 'path',
-                // `url`, `request_uri`, `path`.
+                'regex_tests'       => 'path',
+                'regex_open_delim'  => '/^',
+                'regex_close_delim' => '$/ui',
             ],
         ];
         parent::__construct($instance_base, $instance);
@@ -124,13 +126,14 @@ class App extends SCoreClasses\App
         add_action('init', [$this->Utils->PostType, 'onInit']);
 
         if ($this->Wp->is_admin) {
-            add_action('admin_menu', [$this->Utils->MenuPage, 'onAdminMenu']);
             add_action('admin_init', [$this->Utils->PostMetaBox, 'onAdminInit']);
+            add_action('admin_menu', [$this->Utils->MenuPage, 'onAdminMenu']);
 
-            add_filter('manage_redirect_posts_columns', [$this->Utils->PostType, 'onColumns']);
-            add_filter('manage_edit-redirect_sortable_columns', [$this->Utils->PostType, 'onSortableColumns']);
-            add_action('manage_redirect_posts_custom_column', [$this->Utils->PostType, 'onColumnValue'], 10, 2);
-            add_action('pre_get_posts', [$this->Utils->PostType, 'onPreGetPosts']);
+            add_action('admin_init', [$this->Utils->PostTypeCols, 'onAdminInit']);
+            add_filter('manage_redirect_posts_columns', [$this->Utils->PostTypeCols, 'onColumns']);
+            add_filter('manage_edit-redirect_sortable_columns', [$this->Utils->PostTypeCols, 'onSortableColumns']);
+            add_action('manage_redirect_posts_custom_column', [$this->Utils->PostTypeCols, 'onColumnValue'], 10, 2);
+            add_action('pre_get_posts', [$this->Utils->PostTypeCols, 'onPreGetPosts']);
         } else {
             add_action('wp', [$this->Utils->Redirects, 'onWp'], -1000000);
             // Before security gates in our other plugins.

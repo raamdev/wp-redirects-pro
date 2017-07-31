@@ -92,8 +92,9 @@ class PostType extends SCoreClasses\SCore\Base\Core
                     'author',
                 ],
                 'rewrite' => [
-                    'slug'       => 'r',
                     'with_front' => false,
+                    'slug'       => s::getOption('rewrite_prefix')
+                        ?: s::getDefaultOption('rewrite_prefix'),
                 ],
                 'menu_position' => null,
                 'menu_icon'     => 'dashicons-admin-links',
@@ -157,10 +158,10 @@ class PostType extends SCoreClasses\SCore\Base\Core
                 'description' => __('Redirect Categories', 'wp-redirects'),
 
                 'labels' => [ // See: <http://jas.xyz/244m1Oc>
-                    'name'          => __('Redirect Categories', 'wp-redirects'),
-                    'singular_name' => __('Redirect Category', 'wp-redirects'),
+                    'name'          => __('Categories', 'wp-redirects'),
+                    'singular_name' => __('Category', 'wp-redirects'),
 
-                    'name_admin_bar' => __('Redirect Category', 'wp-redirects'),
+                    'name_admin_bar' => __('Category', 'wp-redirects'),
                     'menu_name'      => __('Categories', 'wp-redirects'),
 
                     'all_items'           => __('All Categories', 'wp-redirects'),
@@ -195,103 +196,5 @@ class PostType extends SCoreClasses\SCore\Base\Core
                 ],
             ])
         );
-    }
-
-    /**
-     * On `manage_redirect_posts_columns` filter.
-     *
-     * @since 170730.42995 Initial release.
-     *
-     * @param array|mixed $columns Current columns.
-     *
-     * @return array Filtered columns.
-     */
-    public function onColumns($columns): array
-    {
-        $columns = (array) ($columns ?: []);
-
-        if (s::getOption('stats_enable')) {
-            $columns['_hits']        = __('Hits', 'wp-redirects');
-            $columns['_last_access'] = __('Last Access', 'wp-redirects');
-        }
-        return $columns;
-    }
-
-    /**
-     * On `manage_edit-redirect_sortable_columns` filter.
-     *
-     * @since 170730.42995 Initial release.
-     *
-     * @param array|mixed $columns Current columns.
-     *
-     * @return array Filtered columns.
-     */
-    public function onSortableColumns($columns): array
-    {
-        $columns = (array) ($columns ?: []);
-
-        if (s::getOption('stats_enable')) {
-            $columns['_hits']        = s::postMetaKey('_hits');
-            $columns['_last_access'] = s::postMetaKey('_last_access');
-        }
-        return $columns;
-    }
-
-    /**
-     * On `manage_redirect_posts_custom_column` hook.
-     *
-     * @since 170730.42995 Initial release.
-     *
-     * @param string     $column Column key.
-     * @param int|string $id     Redirect ID.
-     */
-    public function onColumnValue($column, $id)
-    {
-        $id     = (int) $id;
-        $column = (string) $column;
-
-        if (s::getOption('stats_enable')) {
-            switch ($column) {
-                case '_hits':
-                    echo (string) (int) s::getPostMeta($id, '_hits');
-                    break;
-
-                case '_last_access':
-                    if (!($last_access = (int) s::getPostMeta($id, '_last_access'))) {
-                        echo __('never', 'wp-redirects');
-                    } else {
-                        echo sprintf(__('%1$s ago', 'wp-redirects'), human_time_diff(time(), $last_access));
-                    }
-                    break;
-            }
-        }
-    }
-
-    /**
-     * On `pre_get_posts` hook.
-     *
-     * @since 170730.42995 Initial release.
-     *
-     * @param string     $column Column key.
-     * @param int|string $id     Redirect ID.
-     */
-    public function onPreGetPosts(\WP_Query $WP_Query)
-    {
-        if (!$this->Wp->is_admin) {
-            return; // Not applicable.
-        }
-        if (s::getOption('stats_enable')) {
-            switch ($WP_Query->get('orderby')) {
-                case s::postMetaKey('_hits'):
-                    $WP_Query->set('orderby', 'meta_value_num');
-                    $WP_Query->set('meta_key', s::postMetaKey('_hits'));
-                    break;
-
-                case s::postMetaKey('_last_access'):
-                    $WP_Query->set('orderby', 'meta_value_num');
-                    $WP_Query->set('meta_key', s::postMetaKey('_last_access'));
-                    break;
-            }
-        }
     }
 }

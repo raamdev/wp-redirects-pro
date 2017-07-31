@@ -49,7 +49,9 @@ class MenuPage extends SCoreClasses\SCore\Base\Core
 
             'meta_links' => ['restore' => true],
             'tabs'       => [
-                'default' => sprintf(__('%1$s', 'wp-redirects'), esc_html($this->App->Config->©brand['©name'])),
+                'default'  => sprintf(__('%1$s', 'wp-redirects'), esc_html($this->App->Config->©brand['©name'])),
+                'regex'    => __('Regex', 'wp-redirects'),
+                'defaults' => __('Defaults', 'wp-redirects'),
             ],
         ]);
     }
